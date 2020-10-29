@@ -1,18 +1,16 @@
-# PUTM_DV_docker_2020
-PUT Motorsport Driverless docker image for Ubuntu 20.04 and ROS noetic.
+XAUTH=/tmp/.docker.xauth
+if [ ! -f $XAUTH ]
+then
+    xauth_list=$(xauth nlist :0 | sed -e 's/^..../ffff/')
+    if [ ! -z "$xauth_list" ]
+    then
+        echo $xauth_list | xauth -f $XAUTH nmerge -
+    else
+        touch $XAUTH
+    fi
+    chmod a+r $XAUTH
+fi
 
-1. Add docker X server access:
-```console
-xhost +local:docker
-```
-
-2. Make share directory between host and docker
-```console
-mkdir $HOME/shared
-```
-
-3. Run docker image
-```console
 docker run -it \
     --privileged \
     --env="DISPLAY=$DISPLAY" \
@@ -24,6 +22,6 @@ docker run -it \
     --runtime=nvidia \
     --network host \
     --name "putm_dv" \
+    --rm \
     putm_dv \
     bash
-```
