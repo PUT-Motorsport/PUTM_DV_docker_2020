@@ -33,6 +33,6 @@ docker run -it \
     --runtime=nvidia \
     --network host \
     --name "putm_dv" \
-    putm_dv \
+    matpiech/putm_dv:base \
     bash
 ```
