@@ -26,4 +26,6 @@ RUN ls -la /config/*
 
 RUN pip3 install -r /config/requiremenst.txt
 
+RUN echo "bash /config/hello_script.sh" >> ~/.bashrc
+
 WORKDIR ~

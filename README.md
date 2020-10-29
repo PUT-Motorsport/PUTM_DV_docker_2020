@@ -1,6 +1,10 @@
 # PUTM_DV_docker_2020
 PUT Motorsport Driverless docker image for Ubuntu 20.04 and ROS noetic.
 
+1. Requirements
+- docker 19.03
+- NVIDIA GPU - [nvidia-docker2](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker) section installation on Ubuntu
+
 1. Pull image from DockerHub
 ```bash
 docker pull matpiech/putm_dv:base
