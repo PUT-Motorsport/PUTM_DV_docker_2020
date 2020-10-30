@@ -7,7 +7,7 @@ PUT Motorsport Driverless docker image for Ubuntu 20.04 and ROS noetic.
 
 1. Pull image from DockerHub
 ```bash
-docker pull matpiech/putm_dv:base
+docker pull matpiech/putm_dv:latest
 ```
 
 2. Add docker X server access:
@@ -33,6 +33,6 @@ docker run -it \
     --runtime=nvidia \
     --network host \
     --name "putm_dv" \
-    matpiech/putm_dv:base \
+    matpiech/putm_dv:latest \
     bash
 ```
