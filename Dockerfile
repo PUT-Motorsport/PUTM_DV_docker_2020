@@ -3,11 +3,6 @@ FROM osrf/ros:noetic-desktop-full
 ENV LANG=C.UTF-8
 ENV LANG_ALL=C.UTF-8
 
-ENV NVIDIA_VISIBLE_DEVICES \
-    ${NVIDIA_VISIBLE_DEVICES:-all}
-ENV NVIDIA_DRIVER_CAPABILITIES \
-    ${NVIDIA_DRIVER_CAPABILITIES:+$NVIDIA_DRIVER_CAPABILITIES,}graphics
-
 RUN export DEBIAN_FRONTEND=noninteractive && \
     apt update && \
     apt upgrade -y && \
