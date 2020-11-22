@@ -23,5 +23,5 @@ docker run -it \
     --network host \
     --name "putm_dv" \
     --rm \
-    matpiech/putm_dv:latest \
+    putm_dv:latest \
     bash

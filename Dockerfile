@@ -19,13 +19,16 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
         vim \
         python3-pip \
         python3-all-dev \
-        screen
+        screen \
+        git-all
 
 COPY config/ /config/
 RUN ls -la /config/*
 
 RUN pip3 install -r /config/requiremenst.txt
 
-RUN echo "bash /config/hello_script.sh" >> ~/.bashrc
+RUN cat /config/bashrc_own_lines.txt >> ~/.bashrc
 
 WORKDIR ~
+
+RUN mkdir -p /~/dv_ws/src/

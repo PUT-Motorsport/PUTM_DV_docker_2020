@@ -1,0 +1,8 @@
+# <<< own aliases >>>
+alias python='python3'
+# <<< end of own aliases >>>
+
+# <<< docker setup >>>
+bash /config/hello_script.sh
+source /opt/ros/noetic/setup.bash
+# <<< end of docker setup >>>
