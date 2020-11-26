@@ -31,4 +31,4 @@ RUN cat /config/bashrc_own_lines.txt >> ~/.bashrc
 
 WORKDIR ~
 
-RUN mkdir -p /~/dv_ws/src/
+RUN mkdir -p ~/dv_ws/src/
